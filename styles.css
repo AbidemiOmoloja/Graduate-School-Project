@@ -1,0 +1,384 @@
+/***** Google Font Type *****/
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100'); */
+
+/* -----------------------
+Base styles
+------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ffffff;
+    font-family: 1em/1.2 "Helvetice Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 .5em;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+h1 {  font-size: 1.25em;  }/* 36px */
+h2 {  font-size: 1.75em;  }/* 28px */
+h3 {  font-size: 1.375em; }/* 22px */
+
+p {
+    margin: 0 0 1.5em;
+    line-height: 1.5;
+}
+
+hr {
+    height: 0;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+/* -----------------------
+Layout styles
+------------------------*/
+.container {
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+.header {
+    color: #fff;
+    background: #6B0D1D;
+    float: right;
+    position:fixed;
+    width:100%;
+    z-index: 999;
+}
+
+.header-search {
+    color: #fff;
+    background: #6B0D1D;
+    position:fixed;
+    right:0;
+    width:30%;
+    z-index: 999;
+}
+
+.content {
+    padding: 1em 1.25em;
+    background-color: #fff;
+}
+
+.footer {
+    color: #fff;
+    background: #000;
+    font-size: 12px;
+    padding: 1em 1.25em;
+    clear: both;
+}
+
+/* -----------------------
+Thesis Page Layout with Sidebar
+------------------------*/
+#container_thesis{
+    width:100%;
+    margin:20px auto;
+}
+
+#content_thesis {
+    float:left;
+    width:70%;
+}
+
+#sidebar_thesis {
+    float:left;
+    width:20%;
+    margin-left: 7%;
+}
+
+/* -----------------------
+Navigation
+------------------------*/
+#mainmenu-container {
+    width: 100%;
+    font-size: 14px;
+    background-color: #872e26;
+    margin-right: 30px;
+    margin-top: 60px;
+    position: fixed;
+    z-index: 999;
+}
+
+#mainmenu-bar {
+    width: 90%;
+    height: 32px;
+    margin-left: 30px;
+}
+
+/* drop menu */
+.mainmanu-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+.mainmanu-nav li {
+    float: left;
+    width: 120px;
+    position: relative;
+}
+
+.mainmanu-nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    line-height: 32px;
+}
+
+.mainmanu-nav a:hover {
+    background-color: #e3c153;
+    color: #872e26;
+}
+
+.submenu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #872e26;
+    position: absolute;
+    float: none;
+    font-size: 10px;
+}
+
+li:hover .submenu {
+    display: block;
+    position: absolute;
+}
+
+ul {
+    padding: 0;
+}
+
+/* -------------------------------
+Media Queries for smaller screen
+---------------------------------*/
+@media (min-width: 640px) {
+    .header, .header-search {
+        padding: 1.5em 3em;
+    }
+
+    .content {
+        padding: 2em 3em;
+    }
+
+    .footer {
+        padding: 2em 3em;
+    }
+}
+
+/* -----------------------
+Landing Page Slider
+------------------------*/
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+
+figure {
+    margin: 0; background: #101010;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+}
+
+div#captioned-gallery {
+    width: 100%; overflow: hidden; height: 640px; position:relative; z-index: 1;
+}
+
+figure.slider {
+    position: relative; width: 500%;
+    font-size: 0; animation: 30s slidy infinite;
+}
+
+figure.slider figure {
+    width: 20%; height: 640px;
+    display: inline-block;  position: inherit;
+}
+
+figure.slider img { width: 100%; height:auto;}
+
+figure.slider figure figcaption {
+    position: absolute; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    color: #fff; width: 100%;
+    font-size: 2rem; padding: .6rem;
+}
+
+.button {
+	background-color: #872e26;
+	border: none;
+	color: white;
+	padding: 15px; 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	float: right;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+/* ----- Image grids ----- */
+ul.image-grid {
+    list-style: none;
+    font-size: 0px;
+    margin-left: -2.5%; /* should match li left margin */
+}
+ul.image-grid li {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 0 2.5% 2.5%;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    vertical-align: top;
+    box-shadow: 0 0 5px #ddd;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+ul.image-grid li img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 10px;
+}
+ul.image-grid li h3 {
+    margin: 0 0 5px;
+}
+ul.image-grid li p {
+    font-size: .9em;
+    line-height: 1.5em;
+    color: #999;
+}
+
+/* class for 4 columns */
+ul.image-grid.columns-4 li {
+    width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width: 480px) {
+    ul.image-grid {
+        margin-left: 0;
+    }
+    ul.image-grid li {
+        width: 100% !important; /* over-ride all li styles */
+        margin: 0 0 20px;
+    }
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+/***********Contact Us********/
+.contact_form {
+    margin:10px auto;
+    max-width: 400px;
+    padding: 20px 12px 10px 20px;
+    font-size: 13px;
+}
+.contact_form li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.contact_form label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+.contact_form input[type=text],
+.contact_form input[type=email],
+textarea,
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+}
+.contact_form input[type=text]:focus,
+.contact_form input[type=email]:focus,
+.contact_form textarea:focus,
+.contact_form select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.contact_form .field-divided{
+    width: 49%;
+}
+
+.contact_form .field-long{
+    width: 100%;
+}
+.contact_form .field-select{
+    width: 100%;
+}
+.contact_form .field-textarea{
+    height: 100px;
+}
+.contact_form input[type=submit], .contact_form input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+.contact_form input[type=submit]:hover, .contact_form input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.contact_form .required{
+    color:red;
+}
+
+/**********Social Icons****/
+#share-buttons img {
+    width: 24px;
+    display: inline-block;
+    float: right;
+}
+
+/**********Search**********/
+.searchTerm {
+    float: left;
+    width: 60%;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.searchTerm:focus{
+    color: #000000;
+}
